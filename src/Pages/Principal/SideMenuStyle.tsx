@@ -3,9 +3,13 @@ import { createStyles, makeStyles, Theme, alpha } from '@material-ui/core';
 const drawerWidth = 300;
 export const sideMenuStyles = makeStyles((theme: Theme) =>
   createStyles({
+    underElement:{
+      padding: theme.spacing(3, 1, 1, 4),
+    },
     drawer: {
       width: drawerWidth,
       flexShrink: 0,
+       
     },
     drawerPaper: {
       width: drawerWidth,
