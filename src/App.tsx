@@ -1,6 +1,6 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import Principal from './Pages/Principal';
+import Principal from './Pages/Principal/Principal';
 
 
 const App : React.FC = (props: any) => {
