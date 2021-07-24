@@ -11,9 +11,8 @@ export const cardContentStyle = makeStyles((theme: Theme) =>
       padding: theme.spacing(6, 0, 0, 0),
     },
     mediaGrid: {
-      height: 100,
-      width: 100,
-      padding: theme.spacing(5, 0, 3, 10),
+      height: 140,
+      width: 200      
     },
     content: {
       marginBottom: 8,

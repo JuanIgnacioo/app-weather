@@ -24,9 +24,4 @@ export const StyledTableRow = withStyles((theme: Theme) =>
   }),
 )(TableRow);
 
-export const tableStyles = makeStyles((theme: Theme) =>
-createStyles({
-    table: {
-           
-    },
-  }));
+

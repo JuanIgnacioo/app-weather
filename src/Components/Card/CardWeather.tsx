@@ -42,15 +42,13 @@ const CardWeather: React.FC<CardProps> = (props: CardProps) => {
                 align="center"
                 gutterBottom
                 variant="h5"
-                component="h2"
+                component="h5"
               >
-                {props.cityName ? props.cityName : props.date}
+                {props.cityName ? props.cityName :  props.date}
               </Typography>
               <Typography align="center" gutterBottom component="p">
-                {!props.mode
-                  ? "Sensacion termica Actual"
-                  : "Temperatura promedio"}{" "}
-                : {props.temp?.toFixed()}°
+                 Temperatura :
+                 {props.temp?.toFixed()}°
               </Typography>
               <Typography
                 align="center"

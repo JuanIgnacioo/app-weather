@@ -9,7 +9,6 @@ import React from "react";
 import {
   StyledTableCell,
   StyledTableRow,
-  tableStyles,
 } from "../../Styles/TableContentStyle";
 
 interface TableProps {
@@ -18,10 +17,11 @@ interface TableProps {
   pressure: number;
   clouds: number;
   visivility: number;
+  uv: number;
 }
 
 const TableContent: React.FC<TableProps> = (props: TableProps) => {
-  const classes = tableStyles();
+  
 
   const createData = (name: string, value: any) => {
     return { name, value };
@@ -39,11 +39,12 @@ const TableContent: React.FC<TableProps> = (props: TableProps) => {
     createData("Presion", props.pressure + "MB"),
     createData("Nubosidad", props.clouds + "%"),
     createData("Visibilidad", props.visivility + "KM"),
+    createData("Indice UV", props.uv + ' 0-11 +')
   ];
 
   return (
     <TableContainer>
-      <Table className={classes.table} aria-label="customized table">
+      <Table  aria-label="customized table">
         <TableHead>
           <TableRow>
             <StyledTableCell>Descripciones</StyledTableCell>

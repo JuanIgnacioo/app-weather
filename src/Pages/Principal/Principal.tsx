@@ -40,16 +40,20 @@ const Principal: React.FC = (props: any) => {
   const [probRain, setProbRain] = useState<number>(0);
   const [forecastData, setForecastData] = useState([]);
 
+  const [lat, setLat] = useState(null);
+  const [lon, setLon] = useState(null);
+
   //Hooks para Highlights
   const [tempAparent, setTempAparent] = useState<number>(0);
   const [wind, setWind] = useState<string>("");
   const [visivility, setVisivility] = useState<number>(0);
   const [pressure, setPressure] = useState<number>(0);
   const [clouds, setClouds] = useState<number>(0);
+  const [uv, setUv] = useState<number>(0);
 
   useEffect(() => {
     axios.get("http://ip-api.com/json/").then((res) => {
-      setNameActualCity(res.data.city);
+      if(res.data.city === 'Buenos Aires') setNameActualCity('Ciudad Autonoma de Buenos Aires'); 
     });
   }, []);
 
@@ -74,6 +78,7 @@ const Principal: React.FC = (props: any) => {
           setClouds(res.data.data[0].clouds);
           setVisivility(res.data.data[0].vis);
           setPressure(res.data.data[0].pres);
+          setUv(res.data.data[0].uv);
         });
     }
   }, [nameActualCity]);
@@ -179,7 +184,7 @@ const Principal: React.FC = (props: any) => {
           <Divider />
           <Grid container className={forecastClase.root} spacing={2}>
             <Grid item xs={12}>
-              <Grid container justifyContent="center" spacing={2}>
+              <Grid container justifyContent="center" spacing={6}>
                 {forecastData && forecastData.length > 0
                   ? forecastData.map((item: any) => {
                       return (
@@ -203,15 +208,17 @@ const Principal: React.FC = (props: any) => {
           <Typography variant="h6" align="center">
             Destacados de hoy :
           </Typography>
-          <Grid container>
+         
             <TableContent
               wind={wind ? wind : ""}
               clouds={clouds ? clouds : 0}
               visivility={visivility ? visivility : 0}
               pressure={pressure ? pressure : 0}
               tempAparent={tempAparent ? tempAparent : 0}
+              uv={uv? uv : 0}
             />
-          </Grid>
+        
+         
         </main>
       </div>
     </div>
