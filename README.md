@@ -41,7 +41,7 @@ En la consola, se detallan los resultados de los mismos.
 
 **Ver datos del clima de una ubicacion deseada**
 - **Precondicion** :
-- Arbrir la app
+- Abrir la app
 - Ingresar un nombre en el buscador
 - Presionar tecla "Enter" 
 - Verificar que se cargan los datos en pantalla
@@ -53,7 +53,7 @@ En la consola, se detallan los resultados de los mismos.
 
 **Verificar validacion del buscador**
 - **Precondicion** :
-- Arbrir la app
+- Abrir la app
 - ingresar un nombre de ubicacion inexistente
 - Presionar tecla "Enter" 
 - Verificar que se carga el modal de validacion
