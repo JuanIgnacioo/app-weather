@@ -20,16 +20,14 @@ En la consola, se detallan los resultados de los mismos.
 
 
 ## Herramientas utilizadas en el proyecto
-
-1 - sweetalert2 para modales de advertencia de error
-2 - Axios para realizar peticiones 
-3 - React-router-dom para el manejo de ruteo (solo contiene la ruta raiz "/")
-4 - Material - UI para el diseño
-5 - Hooks para el manejo de estados en React.
-6 - API http://ip-api.com/ para obtener datos de la posicion actual
-7 - API https://www.weatherbit.io/ para obtener los datos del clima
-8 - TypeScript
-9 - Testing Library
+- sweetalert2 para modales de advertencia de error
+- Axios para realizar peticiones 
+- React-router-dom para el manejo de ruteo (solo contiene la ruta raiz "/")
+- Material - UI para el diseño
+- Hooks para el manejo de estados en React.
+- API http://ip-api.com/ para obtener datos de la posicion actual
+- API https://www.weatherbit.io/ para obtener los datos del clima
+- Testing Library
 
 ## TEST CASES
 **Ver datos del clima de la ubicacion actual**
