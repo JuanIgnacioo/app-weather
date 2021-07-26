@@ -29,7 +29,7 @@ const Principal: React.FC = (props: any) => {
   useEffect(() => {
     axios
       .get("http://ip-api.com/json/")
-      .then((res) => {
+      .then((res) => {        
         if (res.data.city === "Buenos Aires"){
           setNameActualCity("Ciudad Autonoma de Buenos Aires");
         }else{
@@ -37,7 +37,7 @@ const Principal: React.FC = (props: any) => {
         }
       })
       .catch((err) => {
-        ubicationNotFound();
+        console.log(err)
         setNameActualCity("Ciudad Autonoma de Buenos Aires");
       });
   }, []);

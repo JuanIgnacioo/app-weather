@@ -66,7 +66,7 @@ export const cityNotFound = () => {
   return Swal.fire({
     icon: "error",
     title: "Oops...",
-    text: "No se pudo encontrar la ubicacion deseada",
+    text: "No se pudo encontrar la ubicacion",
     footer: '<p>(Intente nuevamente)</p>',
   });
 };
