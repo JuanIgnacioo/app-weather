@@ -1,46 +1,64 @@
-# Getting Started with Create React App
+## _Aplicacion del clima_
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# PASOS PARA LEVANTAR LA APLICACION
 
-## Available Scripts
+Una vez clonado el repositorio, se deben instalar las dependencias con el comando "npm i", y posteriormente "npm run start" o "npm start"
+Por default, la aplicacion se levantara en el puerto 3000.
 
-In the project directory, you can run:
+```sh
+npm i
+npm run start
+```
 
-### `npm start`
+## PASOS PARA CORRER LOS TEST
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Se debe ejecutar el siguiente comando
+```sh
+npm run test
+```
+En la consola, se detallan los resultados de los mismos.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+## Herramientas utilizadas en el proyecto
+- sweetalert2 para modales de advertencia de error
+- Axios para realizar peticiones 
+- React-router-dom para el manejo de ruteo (solo contiene la ruta raiz "/")
+- Material - UI para el diseño
+- Hooks para el manejo de estados en React.
+- API http://ip-api.com/ para obtener datos de la posicion actual
+- API https://www.weatherbit.io/ para obtener los datos del clima
+- Testing Library
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## TEST CASES ---------------------------------
+**Ver datos del clima de la ubicacion actual**
+- **Precondicion** :
+- Abrir la app -> verificar que los datos esten cargados en pantalla 
+**Resultado esperado** :
+- Se visualizan los datos del clima de la ubicacion actual, el pronostico extendido y los destacados de la fecha
+**Resultado actual** :
+- Se valida el resultado esperado.
+**Status: ** aprobado
 
-### `npm run build`
+**Ver datos del clima de una ubicacion deseada**
+- **Precondicion** :
+- Abrir la app
+- Ingresar un nombre en el buscador
+- Presionar tecla "Enter" 
+- Verificar que se cargan los datos en pantalla
+**Resultado esperado** :
+- Se visualizan los datos del clima de la ubicacion deseada, el pronostico extendido y los destacados de la fecha
+**Resultado actual** :
+- Se valida el resultado esperado.
+**Status:** Aprobado
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Verificar validacion del buscador**
+- **Precondicion** :
+- Abrir la app
+- ingresar un nombre de ubicacion inexistente
+- Presionar tecla "Enter" 
+- Verificar que se carga el modal de validacion
+**Resultado esperado:**
+- Se visualiza un modal con el mensaje correspondiente de error y se establece por default "Ciudad Autonoma de Buenos Aires"
+**Resultado actual :**
+- Se valida el resultado esperado.
+**Status:** Aprobado
