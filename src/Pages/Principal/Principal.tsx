@@ -8,6 +8,7 @@ import { cityNotFound, ubicationNotFound } from "../../GlobalUtils/Utils";
 
 const Principal: React.FC = (props: any) => {
   const apiKey = "0e14cafa2ba44641bc6f853f918c3708";
+  const geoKey = "6dede874bcd34455806b97375731f983";
 
   const [nameActualCity, setNameActualCity] = useState<string>("");
   const [cityName, setCityName] = useState<string>("");
@@ -28,19 +29,15 @@ const Principal: React.FC = (props: any) => {
 
   useEffect(() => {
     axios
-      .get("http://ip-api.com/json/")
-      .then((res) => {        
-        if (res.data.city === "Buenos Aires"){
-          setNameActualCity("Ciudad Autonoma de Buenos Aires");
-        }else{
-          setNameActualCity(res.data.city);
-        }
+      .get(`https://api.ipgeolocation.io/ipgeo?apiKey=${geoKey}&fields=geo`)
+      .then((res) => { 
+          setNameActualCity(res.data.state_prov);
       })
       .catch((err) => {
-        console.log(err)
+        ubicationNotFound();
         setNameActualCity("Ciudad Autonoma de Buenos Aires");
       });
-  }, []);
+  }, [geoKey]);
 
   useEffect(() => {
     if (nameActualCity) {
