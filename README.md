@@ -25,7 +25,7 @@ En la consola, se detallan los resultados de los mismos.
 - React-router-dom para el manejo de ruteo (solo contiene la ruta raiz "/")
 - Material - UI para el diseño
 - Hooks para el manejo de estados en React.
-- API http://ip-api.com/ para obtener datos de la posicion actual
+- API api.ipgeolocation.io para obtener datos de la posicion actual
 - API https://www.weatherbit.io/ para obtener los datos del clima
 - Testing Library
 
