@@ -3,28 +3,17 @@ import {
   CardActionArea,
   CardMedia,
   Typography,
-  CardContent,
+  CardContent,  
 } from "@material-ui/core";
 import React from "react";
-import { cardContentStyle } from "../../Styles/CardWeatherStyle";
-import notfound from "../../Images/image-not-found.png";
-
-interface CardProps {
-  imageCode?: any;
-  cityName?: string;
-  description?: string;
-  currentWeather?: string;
-  temp?: number;
-  humidity?: number;
-  date?: string;
-  mode?: string;
-  rainProb?: number;
-}
+import { cardContentStyle } from "../Styles/CardWeatherStyle";
+import notfound from "../Images/image-not-found.png";
+import { CardProps } from "../GlobalUtils/Utils";
 
 const CardWeather: React.FC<CardProps> = (props: CardProps) => {
   const classes = cardContentStyle();
   return (
-    <div className={classes.root}>
+    <div data-testid="card-1" className={classes.root}>
       <Card>
         <CardActionArea>
           <CardMedia

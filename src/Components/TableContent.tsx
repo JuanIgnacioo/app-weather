@@ -6,23 +6,18 @@ import {
   TableRow,
 } from "@material-ui/core";
 import React from "react";
-import {
-  StyledTableCell,
-  StyledTableRow,
-} from "../../Styles/TableContentStyle";
+import { StyledTableCell, StyledTableRow } from "../Styles/TableContentStyle";
 
 interface TableProps {
   tempAparent: number;
   wind: string;
   pressure: number;
   clouds: number;
-  visivility: number;
+  visibility: number;
   uv: number;
 }
 
 const TableContent: React.FC<TableProps> = (props: TableProps) => {
-  
-
   const createData = (name: string, value: any) => {
     return { name, value };
   };
@@ -38,13 +33,13 @@ const TableContent: React.FC<TableProps> = (props: TableProps) => {
     createData("Direccion del viento", props.wind + "°"),
     createData("Presion", props.pressure + "MB"),
     createData("Nubosidad", props.clouds + "%"),
-    createData("Visibilidad", props.visivility + "KM"),
-    createData("Indice UV", props.uv + ' 0-11 +')
+    createData("Visibilidad", props.visibility + "KM"),
+    createData("Indice UV", props.uv + " 0-11 +"),
   ];
 
   return (
     <TableContainer>
-      <Table  aria-label="customized table">
+      <Table aria-label="customized table">
         <TableHead>
           <TableRow>
             <StyledTableCell>Descripciones</StyledTableCell>

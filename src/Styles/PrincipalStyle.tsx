@@ -8,7 +8,6 @@ export const principalStyle = makeStyles((theme: Theme) =>
     },
     content: {
       flexGrow: 1,
-      backgroundColor: "#F9FCFB",
       padding: theme.spacing(10, 1, 1, 40),
     },
   })
