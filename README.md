@@ -31,7 +31,7 @@ En la consola, se detallan los resultados de los mismos.
 
 ## TEST CASES ---------------------------------
 **Ver datos del clima de la ubicacion actual**
-**Precondicion** :
+- **Precondicion** :
 - Abrir la app -> verificar que los datos esten cargados en pantalla 
 **Resultado esperado** :
 - Se visualizan los datos del clima de la ubicacion actual, el pronostico extendido y los destacados de la fecha
@@ -40,7 +40,7 @@ En la consola, se detallan los resultados de los mismos.
 **Status: ** aprobado
 
 **Ver datos del clima de una ubicacion deseada**
-**Precondicion** :
+- **Precondicion** :
 - Arbrir la app
 - Ingresar un nombre en el buscador
 - Presionar tecla "Enter" 
@@ -52,7 +52,7 @@ En la consola, se detallan los resultados de los mismos.
 **Status:** Aprobado
 
 **Verificar validacion del buscador**
-**Precondicion** :
+- **Precondicion** :
 - Arbrir la app
 - ingresar un nombre de ubicacion inexistente
 - Presionar tecla "Enter" 
