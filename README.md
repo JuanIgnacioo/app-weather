@@ -29,21 +29,36 @@ En la consola, se detallan los resultados de los mismos.
 - API https://www.weatherbit.io/ para obtener los datos del clima
 - Testing Library
 
-## TEST CASES
+## TEST CASES ---------------------------------
 **Ver datos del clima de la ubicacion actual**
-Precondicion : Abrir la app -> verificar que los datos esten cargados en pantalla 
-Resultado esperado : Se visualizan los datos del clima de la ubicacion actual, el pronostico extendido y los destacados de la fecha
-Resultado actual : Se valida el resultado esperado.
-Status: aprobado
+**Precondicion** :
+- Abrir la app -> verificar que los datos esten cargados en pantalla 
+**Resultado esperado** :
+- Se visualizan los datos del clima de la ubicacion actual, el pronostico extendido y los destacados de la fecha
+**Resultado actual** :
+- Se valida el resultado esperado.
+**Status: ** aprobado
 
 **Ver datos del clima de una ubicacion deseada**
-Precondicion : Arbrir la app -> ingresar un nombre en el buscador -> Presionar tecla "Enter" -> verificar que se cargan los datos en pantalla
-Resultado esperado : Se visualizan los datos del clima de la ubicacion deseada, el pronostico extendido y los destacados de la fecha
-Resultado actual : Se valida el resultado esperado.
-Status: aprobado
+**Precondicion** :
+- Arbrir la app
+- Ingresar un nombre en el buscador
+- Presionar tecla "Enter" 
+- Verificar que se cargan los datos en pantalla
+**Resultado esperado** :
+- Se visualizan los datos del clima de la ubicacion deseada, el pronostico extendido y los destacados de la fecha
+**Resultado actual** :
+- Se valida el resultado esperado.
+**Status:** Aprobado
 
 **Verificar validacion del buscador**
-Precondicion : Arbrir la app -> ingresar un nombre de ubicacion inexistente -> Presionar tecla "Enter" -> verificar que se carga el modal de validacion
-Resultado esperado: Se visualiza un modal con el mensaje correspondiente de error y se establece por default "Ciudad Autonoma de Buenos Aires"
-Resultado actual : Se valida el resultado esperado.
-Status: aprobado
+**Precondicion** :
+- Arbrir la app
+- ingresar un nombre de ubicacion inexistente
+- Presionar tecla "Enter" 
+- Verificar que se carga el modal de validacion
+**Resultado esperado:**
+- Se visualiza un modal con el mensaje correspondiente de error y se establece por default "Ciudad Autonoma de Buenos Aires"
+**Resultado actual :**
+- Se valida el resultado esperado.
+**Status:** Aprobado
